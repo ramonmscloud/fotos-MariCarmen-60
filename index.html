@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mari Carmen 60 años</title>
+
+  <!-- Estilo de Lightbox2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
+  <!-- Estilo personalizado -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #d32f2f;
+    }
+    p.subtitle {
+      margin: 10px 0 0;
+      color: #666;
+      font-style: italic;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      padding: 20px;
+    }
+    .gallery a {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+    }
+    .gallery a:hover {
+      transform: translateY(-5px);
+    }
+    .gallery img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .download-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s, background 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .gallery a:hover .download-btn {
+      opacity: 1;
+    }
+    .download-btn:hover {
+      background: rgba(0, 0, 0, 0.9);
+    }
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      color: #999;
+      font-size: 14px;
+      border-top: 1px solid #eee;
+    }
+    @media (max-width: 600px) {
+      .gallery img {
+        width: 150px;
+        height: 150px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mari Carmen 60 años</h1>
+    <p class="subtitle">Un álbum lleno de amor, risas y recuerdos inolvidables</p>
+  </header>
+
+  <div class="gallery">
+    <!-- Fotos del 01.jpg al 70.jpg -->
+    <!-- Cada una con botón de descarga y en carrusel -->
+    <a href="fotos/01.jpg" data-lightbox="album" data-title="Foto 01">
+      <img src="fotos/01.jpg" alt="Foto 01" />
+      <button class="download-btn" onclick="downloadImage('fotos/01.jpg', 'MariCarmen_01.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/02.jpg" data-lightbox="album" data-title="Foto 02">
+      <img src="fotos/02.jpg" alt="Foto 02" />
+      <button class="download-btn" onclick="downloadImage('fotos/02.jpg', 'MariCarmen_02.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/03.jpg" data-lightbox="album" data-title="Foto 03">
+      <img src="fotos/03.jpg" alt="Foto 03" />
+      <button class="download-btn" onclick="downloadImage('fotos/03.jpg', 'MariCarmen_03.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/04.jpg" data-lightbox="album" data-title="Foto 04">
+      <img src="fotos/04.jpg" alt="Foto 04" />
+      <button class="download-btn" onclick="downloadImage('fotos/04.jpg', 'MariCarmen_04.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/05.jpg" data-lightbox="album" data-title="Foto 05">
+      <img src="fotos/05.jpg" alt="Foto 05" />
+      <button class="download-btn" onclick="downloadImage('fotos/05.jpg', 'MariCarmen_05.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/06.jpg" data-lightbox="album" data-title="Foto 06">
+      <img src="fotos/06.jpg" alt="Foto 06" />
+      <button class="download-btn" onclick="downloadImage('fotos/06.jpg', 'MariCarmen_06.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/07.jpg" data-lightbox="album" data-title="Foto 07">
+      <img src="fotos/07.jpg" alt="Foto 07" />
+      <button class="download-btn" onclick="downloadImage('fotos/07.jpg', 'MariCarmen_07.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/08.jpg" data-lightbox="album" data-title="Foto 08">
+      <img src="fotos/08.jpg" alt="Foto 08" />
+      <button class="download-btn" onclick="downloadImage('fotos/08.jpg', 'MariCarmen_08.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/09.jpg" data-lightbox="album" data-title="Foto 09">
+      <img src="fotos/09.jpg" alt="Foto 09" />
+      <button class="download-btn" onclick="downloadImage('fotos/09.jpg', 'MariCarmen_09.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/10.jpg" data-lightbox="album" data-title="Foto 10">
+      <img src="fotos/10.jpg" alt="Foto 10" />
+      <button class="download-btn" onclick="downloadImage('fotos/10.jpg', 'MariCarmen_10.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/11.jpg" data-lightbox="album" data-title="Foto 11">
+      <img src="fotos/11.jpg" alt="Foto 11" />
+      <button class="download-btn" onclick="downloadImage('fotos/11.jpg', 'MariCarmen_11.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/12.jpg" data-lightbox="album" data-title="Foto 12">
+      <img src="fotos/12.jpg" alt="Foto 12" />
+      <button class="download-btn" onclick="downloadImage('fotos/12.jpg', 'MariCarmen_12.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/13.jpg" data-lightbox="album" data-title="Foto 13">
+      <img src="fotos/13.jpg" alt="Foto 13" />
+      <button class="download-btn" onclick="downloadImage('fotos/13.jpg', 'MariCarmen_13.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/14.jpg" data-lightbox="album" data-title="Foto 14">
+      <img src="fotos/14.jpg" alt="Foto 14" />
+      <button class="download-btn" onclick="downloadImage('fotos/14.jpg', 'MariCarmen_14.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/15.jpg" data-lightbox="album" data-title="Foto 15">
+      <img src="fotos/15.jpg" alt="Foto 15" />
+      <button class="download-btn" onclick="downloadImage('fotos/15.jpg', 'MariCarmen_15.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/16.jpg" data-lightbox="album" data-title="Foto 16">
+      <img src="fotos/16.jpg" alt="Foto 16" />
+      <button class="download-btn" onclick="downloadImage('fotos/16.jpg', 'MariCarmen_16.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/17.jpg" data-lightbox="album" data-title="Foto 17">
+      <img src="fotos/17.jpg" alt="Foto 17" />
+      <button class="download-btn" onclick="downloadImage('fotos/17.jpg', 'MariCarmen_17.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/18.jpg" data-lightbox="album" data-title="Foto 18">
+      <img src="fotos/18.jpg" alt="Foto 18" />
+      <button class="download-btn" onclick="downloadImage('fotos/18.jpg', 'MariCarmen_18.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/19.jpg" data-lightbox="album" data-title="Foto 19">
+      <img src="fotos/19.jpg" alt="Foto 19" />
+      <button class="download-btn" onclick="downloadImage('fotos/19.jpg', 'MariCarmen_19.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/20.jpg" data-lightbox="album" data-title="Foto 20">
+      <img src="fotos/20.jpg" alt="Foto 20" />
+      <button class="download-btn" onclick="downloadImage('fotos/20.jpg', 'MariCarmen_20.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/21.jpg" data-lightbox="album" data-title="Foto 21">
+      <img src="fotos/21.jpg" alt="Foto 21" />
+      <button class="download-btn" onclick="downloadImage('fotos/21.jpg', 'MariCarmen_21.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/22.jpg" data-lightbox="album" data-title="Foto 22">
+      <img src="fotos/22.jpg" alt="Foto 22" />
+      <button class="download-btn" onclick="downloadImage('fotos/22.jpg', 'MariCarmen_22.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/23.jpg" data-lightbox="album" data-title="Foto 23">
+      <img src="fotos/23.jpg" alt="Foto 23" />
+      <button class="download-btn" onclick="downloadImage('fotos/23.jpg', 'MariCarmen_23.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/24.jpg" data-lightbox="album" data-title="Foto 24">
+      <img src="fotos/24.jpg" alt="Foto 24" />
+      <button class="download-btn" onclick="downloadImage('fotos/24.jpg', 'MariCarmen_24.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/25.jpg" data-lightbox="album" data-title="Foto 25">
+      <img src="fotos/25.jpg" alt="Foto 25" />
+      <button class="download-btn" onclick="downloadImage('fotos/25.jpg', 'MariCarmen_25.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/26.jpg" data-lightbox="album" data-title="Foto 26">
+      <img src="fotos/26.jpg" alt="Foto 26" />
+      <button class="download-btn" onclick="downloadImage('fotos/26.jpg', 'MariCarmen_26.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/27.jpg" data-lightbox="album" data-title="Foto 27">
+      <img src="fotos/27.jpg" alt="Foto 27" />
+      <button class="download-btn" onclick="downloadImage('fotos/27.jpg', 'MariCarmen_27.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/28.jpg" data-lightbox="album" data-title="Foto 28">
+      <img src="fotos/28.jpg" alt="Foto 28" />
+      <button class="download-btn" onclick="downloadImage('fotos/28.jpg', 'MariCarmen_28.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/29.jpg" data-lightbox="album" data-title="Foto 29">
+      <img src="fotos/29.jpg" alt="Foto 29" />
+      <button class="download-btn" onclick="downloadImage('fotos/29.jpg', 'MariCarmen_29.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/30.jpg" data-lightbox="album" data-title="Foto 30">
+      <img src="fotos/30.jpg" alt="Foto 30" />
+      <button class="download-btn" onclick="downloadImage('fotos/30.jpg', 'MariCarmen_30.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/31.jpg" data-lightbox="album" data-title="Foto 31">
+      <img src="fotos/31.jpg" alt="Foto 31" />
+      <button class="download-btn" onclick="downloadImage('fotos/31.jpg', 'MariCarmen_31.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/32.jpg" data-lightbox="album" data-title="Foto 32">
+      <img src="fotos/32.jpg" alt="Foto 32" />
+      <button class="download-btn" onclick="downloadImage('fotos/32.jpg', 'MariCarmen_32.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/33.jpg" data-lightbox="album" data-title="Foto 33">
+      <img src="fotos/33.jpg" alt="Foto 33" />
+      <button class="download-btn" onclick="downloadImage('fotos/33.jpg', 'MariCarmen_33.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/34.jpg" data-lightbox="album" data-title="Foto 34">
+      <img src="fotos/34.jpg" alt="Foto 34" />
+      <button class="download-btn" onclick="downloadImage('fotos/34.jpg', 'MariCarmen_34.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/35.jpg" data-lightbox="album" data-title="Foto 35">
+      <img src="fotos/35.jpg" alt="Foto 35" />
+      <button class="download-btn" onclick="downloadImage('fotos/35.jpg', 'MariCarmen_35.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/36.jpg" data-lightbox="album" data-title="Foto 36">
+      <img src="fotos/36.jpg" alt="Foto 36" />
+      <button class="download-btn" onclick="downloadImage('fotos/36.jpg', 'MariCarmen_36.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/37.jpg" data-lightbox="album" data-title="Foto 37">
+      <img src="fotos/37.jpg" alt="Foto 37" />
+      <button class="download-btn" onclick="downloadImage('fotos/37.jpg', 'MariCarmen_37.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/38.jpg" data-lightbox="album" data-title="Foto 38">
+      <img src="fotos/38.jpg" alt="Foto 38" />
+      <button class="download-btn" onclick="downloadImage('fotos/38.jpg', 'MariCarmen_38.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/39.jpg" data-lightbox="album" data-title="Foto 39">
+      <img src="fotos/39.jpg" alt="Foto 39" />
+      <button class="download-btn" onclick="downloadImage('fotos/39.jpg', 'MariCarmen_39.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/40.jpg" data-lightbox="album" data-title="Foto 40">
+      <img src="fotos/40.jpg" alt="Foto 40" />
+      <button class="download-btn" onclick="downloadImage('fotos/40.jpg', 'MariCarmen_40.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/41.jpg" data-lightbox="album" data-title="Foto 41">
+      <img src="fotos/41.jpg" alt="Foto 41" />
+      <button class="download-btn" onclick="downloadImage('fotos/41.jpg', 'MariCarmen_41.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/42.jpg" data-lightbox="album" data-title="Foto 42">
+      <img src="fotos/42.jpg" alt="Foto 42" />
+      <button class="download-btn" onclick="downloadImage('fotos/42.jpg', 'MariCarmen_42.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/43.jpg" data-lightbox="album" data-title="Foto 43">
+      <img src="fotos/43.jpg" alt="Foto 43" />
+      <button class="download-btn" onclick="downloadImage('fotos/43.jpg', 'MariCarmen_43.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/44.jpg" data-lightbox="album" data-title="Foto 44">
+      <img src="fotos/44.jpg" alt="Foto 44" />
+      <button class="download-btn" onclick="downloadImage('fotos/44.jpg', 'MariCarmen_44.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/45.jpg" data-lightbox="album" data-title="Foto 45">
+      <img src="fotos/45.jpg" alt="Foto 45" />
+      <button class="download-btn" onclick="downloadImage('fotos/45.jpg', 'MariCarmen_45.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/46.jpg" data-lightbox="album" data-title="Foto 46">
+      <img src="fotos/46.jpg" alt="Foto 46" />
+      <button class="download-btn" onclick="downloadImage('fotos/46.jpg', 'MariCarmen_46.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/47.jpg" data-lightbox="album" data-title="Foto 47">
+      <img src="fotos/47.jpg" alt="Foto 47" />
+      <button class="download-btn" onclick="downloadImage('fotos/47.jpg', 'MariCarmen_47.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/48.jpg" data-lightbox="album" data-title="Foto 48">
+      <img src="fotos/48.jpg" alt="Foto 48" />
+      <button class="download-btn" onclick="downloadImage('fotos/48.jpg', 'MariCarmen_48.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/49.jpg" data-lightbox="album" data-title="Foto 49">
+      <img src="fotos/49.jpg" alt="Foto 49" />
+      <button class="download-btn" onclick="downloadImage('fotos/49.jpg', 'MariCarmen_49.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/50.jpg" data-lightbox="album" data-title="Foto 50">
+      <img src="fotos/50.jpg" alt="Foto 50" />
+      <button class="download-btn" onclick="downloadImage('fotos/50.jpg', 'MariCarmen_50.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/51.jpg" data-lightbox="album" data-title="Foto 51">
+      <img src="fotos/51.jpg" alt="Foto 51" />
+      <button class="download-btn" onclick="downloadImage('fotos/51.jpg', 'MariCarmen_51.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/52.jpg" data-lightbox="album" data-title="Foto 52">
+      <img src="fotos/52.jpg" alt="Foto 52" />
+      <button class="download-btn" onclick="downloadImage('fotos/52.jpg', 'MariCarmen_52.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/53.jpg" data-lightbox="album" data-title="Foto 53">
+      <img src="fotos/53.jpg" alt="Foto 53" />
+      <button class="download-btn" onclick="downloadImage('fotos/53.jpg', 'MariCarmen_53.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/54.jpg" data-lightbox="album" data-title="Foto 54">
+      <img src="fotos/54.jpg" alt="Foto 54" />
+      <button class="download-btn" onclick="downloadImage('fotos/54.jpg', 'MariCarmen_54.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/55.jpg" data-lightbox="album" data-title="Foto 55">
+      <img src="fotos/55.jpg" alt="Foto 55" />
+      <button class="download-btn" onclick="downloadImage('fotos/55.jpg', 'MariCarmen_55.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/56.jpg" data-lightbox="album" data-title="Foto 56">
+      <img src="fotos/56.jpg" alt="Foto 56" />
+      <button class="download-btn" onclick="downloadImage('fotos/56.jpg', 'MariCarmen_56.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/57.jpg" data-lightbox="album" data-title="Foto 57">
+      <img src="fotos/57.jpg" alt="Foto 57" />
+      <button class="download-btn" onclick="downloadImage('fotos/57.jpg', 'MariCarmen_57.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/58.jpg" data-lightbox="album" data-title="Foto 58">
+      <img src="fotos/58.jpg" alt="Foto 58" />
+      <button class="download-btn" onclick="downloadImage('fotos/58.jpg', 'MariCarmen_58.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/59.jpg" data-lightbox="album" data-title="Foto 59">
+      <img src="fotos/59.jpg" alt="Foto 59" />
+      <button class="download-btn" onclick="downloadImage('fotos/59.jpg', 'MariCarmen_59.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/60.jpg" data-lightbox="album" data-title="Foto 60">
+      <img src="fotos/60.jpg" alt="Foto 60" />
+      <button class="download-btn" onclick="downloadImage('fotos/60.jpg', 'MariCarmen_60.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/61.jpg" data-lightbox="album" data-title="Foto 61">
+      <img src="fotos/61.jpg" alt="Foto 61" />
+      <button class="download-btn" onclick="downloadImage('fotos/61.jpg', 'MariCarmen_61.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/62.jpg" data-lightbox="album" data-title="Foto 62">
+      <img src="fotos/62.jpg" alt="Foto 62" />
+      <button class="download-btn" onclick="downloadImage('fotos/62.jpg', 'MariCarmen_62.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/63.jpg" data-lightbox="album" data-title="Foto 63">
+      <img src="fotos/63.jpg" alt="Foto 63" />
+      <button class="download-btn" onclick="downloadImage('fotos/63.jpg', 'MariCarmen_63.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/64.jpg" data-lightbox="album" data-title="Foto 64">
+      <img src="fotos/64.jpg" alt="Foto 64" />
+      <button class="download-btn" onclick="downloadImage('fotos/64.jpg', 'MariCarmen_64.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/65.jpg" data-lightbox="album" data-title="Foto 65">
+      <img src="fotos/65.jpg" alt="Foto 65" />
+      <button class="download-btn" onclick="downloadImage('fotos/65.jpg', 'MariCarmen_65.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/66.jpg" data-lightbox="album" data-title="Foto 66">
+      <img src="fotos/66.jpg" alt="Foto 66" />
+      <button class="download-btn" onclick="downloadImage('fotos/66.jpg', 'MariCarmen_66.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/67.jpg" data-lightbox="album" data-title="Foto 67">
+      <img src="fotos/67.jpg" alt="Foto 67" />
+      <button class="download-btn" onclick="downloadImage('fotos/67.jpg', 'MariCarmen_67.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/68.jpg" data-lightbox="album" data-title="Foto 68">
+      <img src="fotos/68.jpg" alt="Foto 68" />
+      <button class="download-btn" onclick="downloadImage('fotos/68.jpg', 'MariCarmen_68.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/69.jpg" data-lightbox="album" data-title="Foto 69">
+      <img src="fotos/69.jpg" alt="Foto 69" />
+      <button class="download-btn" onclick="downloadImage('fotos/69.jpg', 'MariCarmen_69.jpg')">&#x2193;</button>
+    </a>
+
+    <a href="fotos/70.jpg" data-lightbox="album" data-title="Foto 70">
+      <img src="fotos/70.jpg" alt="Foto 70" />
+      <button class="download-btn" onclick="downloadImage('fotos/70.jpg', 'MariCarmen_70.jpg')">&#x2193;</button>
+    </a>
+  </div>
+
+  <footer>
+    &copy; 2025 - Álbum de Mari Carmen. Todos los recuerdos llenos de amor.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <script>
+    function downloadImage(url, filename) {
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  </script>
+</body>
+</html>
